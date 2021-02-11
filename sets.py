@@ -13,3 +13,22 @@ print('--------')
 # using a set, which is much faster
 unique_types_set = set(primary_types)
 print(unique_types_set)
+
+
+# Compare function to set
+names = ['Forretress', 'WormadamSandy Cloak', 'Croagunk', 'Mime Jr.', 'Camerupt']
+primary_types = ['Bug', 'Bug', 'Poison', 'Psychic', 'Fire']
+generations = [2, 4, 4, 4, 3]
+
+def find_unique_items(data):
+  uniques = [] 
+  
+  for item in data:
+    if item not in uniques:
+      uniques.append(item)
+
+  return uniques
+
+unique_names_set = set(names)
+
+print(sorted(find_unique_items(names)) == sorted(unique_names_set))
