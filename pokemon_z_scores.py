@@ -27,3 +27,20 @@ for name, hp, zscore in poke_zscores:
     highest_hp_pokemon.append((name, hp, zscore))
 
 print(highest_hp_pokemon)
+
+# ToDo - make it faster. Use NumPy to eliminate the previous for loop
+
+# Calculate the total HP avg and total HP standard deviation
+hp_avg = hps.mean()
+hp_std = hps.std()
+
+# Use NumPy to eliminate the previous for loop
+z_scores = (hps - hp_avg) / hp_std
+
+# Combine names, hps, and z_scores in a list of typles
+poke_zscores2 = [*zip(names, hps, z_scores)]
+print('-----------')
+# Print it out of the list using the * 
+print(*poke_zscores2[:3], sep='\n')
+
+
