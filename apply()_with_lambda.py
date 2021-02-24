@@ -14,15 +14,10 @@ def text_playoffs(num_playoffs):
     return 'No'
 
 # Use .apply() and a lambda function to apply text_playoffs() to each row's 'Playoffs' value of the rays_df DataFrame.
-
 # textual_playoffs = rays_df.apply(lambda row: text_playoffs(row['Playoffs']), axis = 1 )
 # print(textual_playoffs)
-
 # The .apply() method let's you apply functions to all rows or columns of a DataFrame by specifying an axis.
-
 # If you've been using pandas for some time, you may have noticed that a better way to find these stats would use the pandas built-in .sum() method.
-
 # You could have used rays_df.sum(axis=0) to get columnar sums and rays_df[['RS', 'RA']].sum(axis=1) to get row sums.
-
 # You could have also used .apply() directly on a Series (or column) of the DataFrame. For example, you could use rays_df['Playoffs'].apply(text_playoffs) to convert the 'Playoffs' column to text.
 
